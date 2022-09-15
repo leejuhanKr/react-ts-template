@@ -11,7 +11,13 @@ module.exports = (_env, argv) => {
       path: path.resolve(__dirname, "../build"),
     },
     module: {
-      // rules
+      rules: [
+        {
+          test: /\.(js|jsx|ts|tsx)$/,
+          use: ["babel-loader", "ts-loader"],
+          exclude: /node_modules/,
+        },
+      ],
     },
     // resolve https://webpack.kr/configuration/resolve/
     resolve: {

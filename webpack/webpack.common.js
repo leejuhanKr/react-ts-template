@@ -10,6 +10,9 @@ module.exports = (_env, argv) => {
     output: {
       path: path.resolve(__dirname, "../build"),
     },
+    module: {
+      // rules
+    },
     // resolve https://webpack.kr/configuration/resolve/
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],

@@ -2,6 +2,12 @@
 
 const path = require("path");
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const imageInlineSizeLimit = process.env.IMAGE_INLINE_SIZE_LIMIT
+  ? parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT)
+  : 1024 * 10;
+
 module.exports = (_env, argv) => {
   return {
     // entry https://webpack.kr/concepts/entry-points
@@ -27,6 +33,12 @@ module.exports = (_env, argv) => {
         },
       ],
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './public/index.html',
+        filename: 'index.html',
+      }),
+    ],
     // resolve https://webpack.kr/configuration/resolve/
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],

@@ -10,7 +10,7 @@ module.exports = (_env, argv) => {
     },
     devServer: {
       static: path.join(__dirname, '../build'),
-      port: 3000,
+      port: 3001,
       historyApiFallback: true,
     },
     module: {

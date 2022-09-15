@@ -1,0 +1,12 @@
+{
+  "name": "react-ts-template",
+  "version": "1.0.0",
+  "description": "`create-react-app \"project-name\" --template typescript`와 유사한 환경을 wdbpack을 통해 구성하는 프로젝트입니다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

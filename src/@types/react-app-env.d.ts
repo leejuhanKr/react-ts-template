@@ -44,7 +44,7 @@ declare module '*.webp' {
     export default src;
 }
 
-declare module '*.svg' {
+declare module '*.svg' /* {
   import * as React from 'react';
 
   export const ReactComponent: React.FunctionComponent<React.SVGProps<
@@ -53,7 +53,7 @@ declare module '*.svg' {
 
   const src: string;
   export default src;
-}
+} */
 
 declare module '*.module.css' {
   const classes: { readonly [key: string]: string };

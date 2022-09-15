@@ -17,6 +17,14 @@ module.exports = (_env, argv) => {
           use: ["babel-loader", "ts-loader"],
           exclude: /node_modules/,
         },
+        {
+          test: /\.(bmp|gif|jpe?g|png|svg|webp)$/i,
+          loader: 'url-loader',
+          options: {
+            limit: imageInlineSizeLimit,
+            name: 'static/media/[name].[contenthash:8].[ext]',
+          },
+        },
       ],
     },
     // resolve https://webpack.kr/configuration/resolve/

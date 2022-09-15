@@ -13,5 +13,13 @@ module.exports = (_env, argv) => {
       port: 3000,
       historyApiFallback: true,
     },
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader',],
+        },
+      ],
+    },
   };
 };

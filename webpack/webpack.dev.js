@@ -1,7 +1,7 @@
 'use strict';
 const path = require('path');
 
-module.exports = {
+module.exports = (_env, prod) =>{return{
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
@@ -20,4 +20,4 @@ module.exports = {
       },
     ],
   },
-};
+};}

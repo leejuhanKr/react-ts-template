@@ -79,6 +79,7 @@ module.exports = (_env) => {
         "process.env.IMAGE_INLINE_SIZE_LIMIT": JSON.stringify(
           process.env.IMAGE_INLINE_SIZE_LIMIT
         ),
+        "process.env.APP_API": JSON.stringify(process.env.APP_API)
       }),
     ],
   };
